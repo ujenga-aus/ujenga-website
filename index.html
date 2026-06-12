@@ -126,8 +126,8 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--charcoal);line-h
 .btn-primary:hover{background:var(--orange-dark);transform:translateY(-1px);}
 .btn-text{color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.92rem;font-weight:500;transition:color 0.2s;display:inline-flex;align-items:center;gap:0.4rem;}
 .btn-text:hover{color:var(--white);}
-.hero-creds{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;gap:2.5rem;flex-wrap:wrap;}
-.hc-val{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--orange);line-height:1;}
+.hero-creds{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;gap:1.6rem;flex-wrap:wrap;}
+.hc-val{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--orange);line-height:1;white-space:nowrap;}
 .hc-lbl{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-top:0.25rem;font-weight:500;}
 .hero-cards{display:flex;flex-direction:column;gap:0;}
 .info-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-top:none;padding:1.1rem 1.5rem;transition:background 0.2s;}
@@ -399,7 +399,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
       <div class="hero-creds">
         <div><div class="hc-val">30+</div><div class="hc-lbl">Years Tier 1 Experience</div></div>
         <div><div class="hc-val">QBCC</div><div class="hc-lbl">Registered Adjudicator</div></div>
-        <div><div class="hc-val">NMAS</div><div class="hc-lbl">Accredited Mediator</div></div>
+        <div><div class="hc-val">ADR</div><div class="hc-lbl">Mediator</div></div>
         <div><div class="hc-val">Resolution Institute</div><div class="hc-lbl">Expert Determination</div></div>
         <div><div class="hc-val">$1.4B+</div><div class="hc-lbl">Programmes Delivered</div></div>
       </div>
@@ -503,7 +503,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
       <div class="cap-card fade-up d2"><div class="cap-num">06</div><h3>Claims Prosecution &amp; Defence</h3><p>End-to-end claim strategy - entitlement analysis, quantum build-up, narrative drafting and submission management. We prosecute your claims and defend against the other side's.</p><div class="cap-tags"><span class="cap-tag">Entitlement</span><span class="cap-tag">Quantum</span><span class="cap-tag">Submissions</span></div></div>
       <div class="cap-card fade-up"><div class="cap-num">07</div><h3>Delay &amp; Programme Analysis</h3><p>Forensic schedule analysis using time-impact, as-planned vs as-built and windows techniques. Defensible cause-and-effect narratives that stand up to expert scrutiny.</p><div class="cap-tags"><span class="cap-tag">Time-Impact</span><span class="cap-tag">As-Built</span><span class="cap-tag">SCL Protocol</span></div></div>
       <div class="cap-card fade-up d1"><div class="cap-num">08</div><h3>Payment Security &amp; Adjudication</h3><p>Merit assessment, preparation and prosecution of adjudication applications and responses under the BIF Act. As a registered QBCC adjudicator, we understand what succeeds - and advise you honestly when a claim won't stand up.</p><div class="cap-tags"><span class="cap-tag">BIF Act 2017</span><span class="cap-tag">QBCC</span><span class="cap-tag">Adjudication</span></div></div>
-      <div class="cap-card fade-up d2"><div class="cap-num">09</div><h3>Commercial Mediation</h3><p>Accredited mediator services focused on preserving project relationships. Constructive, outcome-driven facilitation that resolves disputes without the cost and delay of formal proceedings.</p><div class="cap-tags"><span class="cap-tag">Accredited Mediator</span><span class="cap-tag">ADR</span><span class="cap-tag">Facilitation</span></div></div>
+      <div class="cap-card fade-up d2"><div class="cap-num">09</div><h3>Commercial Mediation</h3><p>Mediator services focused on preserving project relationships. Constructive, outcome-driven facilitation that resolves disputes without the cost and delay of formal proceedings.</p><div class="cap-tags"><span class="cap-tag">Mediator</span><span class="cap-tag">ADR</span><span class="cap-tag">Facilitation</span></div></div>
       <div class="cap-card fade-up"><div class="cap-num">10</div><h3>Project Financial Oversight</h3><p>Cost-to-complete forecasting, earned value tracking, contract valuations and margin reporting. The financial lens your project needs to protect the bottom line.</p><div class="cap-tags"><span class="cap-tag">Cost-to-Complete</span><span class="cap-tag">Earned Value</span><span class="cap-tag">Margin</span></div></div>
       <div class="cap-card fade-up d1"><div class="cap-num">11</div><h3>Commercial Governance &amp; Policy</h3><p>Design and implementation of commercial frameworks, delegation authorities, approval workflows and reporting structures that bring rigour and transparency to your operations.</p><div class="cap-tags"><span class="cap-tag">Frameworks</span><span class="cap-tag">Delegation</span><span class="cap-tag">Reporting</span></div></div>
       <div class="cap-card fade-up d2"><div class="cap-num">12</div><h3>Capability Building &amp; Upskilling</h3><p>Practical, workshop-based training in contract administration, claims, SOP legislation and commercial fundamentals - built for the people who run your projects, not the boardroom.</p><div class="cap-tags"><span class="cap-tag">Training</span><span class="cap-tag">Workshops</span><span class="cap-tag">SOP</span></div></div>
@@ -531,7 +531,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
       </div>
       <div class="why-card fade-up d3">
         <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-        <div><h3>Senior-Led, Every Engagement</h3><p>You work directly with our director - 30+ years of Tier 1 experience, QBCC adjudicator and accredited mediator. Not junior staff learning on your project.</p></div>
+        <div><h3>Senior-Led, Every Engagement</h3><p>You work directly with our director - 30+ years of Tier 1 experience, QBCC adjudicator and mediator. Not junior staff learning on your project.</p></div>
       </div>
     </div>
   </div>
@@ -545,7 +545,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
     <div class="cred-grid">
       <div class="cred-item fade-up"><div class="cred-value">30+ Years</div><div class="cred-desc">Senior Tier 1 infrastructure experience across Queensland and national major programmes</div></div>
       <div class="cred-item fade-up d1"><div class="cred-value">QBCC Adjudicator</div><div class="cred-desc">Registered adjudicator under the Building Industry Fairness Act 2017</div></div>
-      <div class="cred-item fade-up d2"><div class="cred-value">Accredited Mediator</div><div class="cred-desc">Commercial dispute resolution and mediation services for infrastructure and construction</div></div>
+      <div class="cred-item fade-up d2"><div class="cred-value">Mediator</div><div class="cred-desc">Commercial dispute resolution and mediation services for infrastructure and construction</div></div>
       <div class="cred-item fade-up d2"><div class="cred-value">$1.4B+ Programmes</div><div class="cred-desc">Rail, road, marine, energy and building programmes across Queensland and nationally</div></div>
     </div>
   </div>
