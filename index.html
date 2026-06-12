@@ -42,7 +42,43 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0F2137">
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Michroma&display=swap" rel="stylesheet">
+<!-- Preconnect for fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "uJenga Pty Ltd",
+  "description": "Senior infrastructure commercial advisory — adjudication, contract review, claims preparation, dispute resolution and AI-powered commercial analysis for major infrastructure programmes across Australia.",
+  "url": "https://ujenga.com.au",
+  "telephone": "",
+  "email": "connect@ujenga.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Level 19, 10 Eagle Street",
+    "addressLocality": "Brisbane",
+    "addressRegion": "QLD",
+    "postalCode": "4000",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -27.4677,
+    "longitude": 153.0281
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Australia"
+  },
+  "knowsAbout": ["Infrastructure Commercial Advisory", "Adjudication", "BIF Act 2017", "Security of Payment", "Contract Review", "Claims Preparation", "Dispute Resolution", "NEC4", "AS4000", "FIDIC", "Subcontract Advisory", "Monte Carlo Risk Modelling"],
+  "slogan": "Certainty you can build on",
+  "priceRange": "$$$$"
+}
+</script>
 <style>
 :root {
   --orange:      #F15826;
@@ -79,18 +115,18 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--charcoal);line-h
 .hero{margin-top:80px;background:var(--navy);min-height:82vh;display:flex;align-items:center;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(155deg,var(--navy) 0%,var(--navy-mid) 55%,var(--navy-light) 100%);}
 .hero::after{content:'';position:absolute;right:-4%;bottom:-12%;width:520px;height:520px;border:1px solid rgba(241,88,38,0.08);border-radius:50%;}
-.hero-inner{max-width:1280px;margin:0 auto;padding:5rem 3rem;position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1fr 480px;gap:4rem;align-items:center;}
+.hero-inner{max-width:1280px;margin:0 auto;padding:5rem 3rem;position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center;}
 .hero-eyebrow{font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--orange);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;}
 .hero-eyebrow::before{content:'';display:block;width:28px;height:2px;background:var(--orange);}
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,4.5vw,3.8rem);font-weight:400;color:var(--white);line-height:1.15;margin-bottom:0.75rem;}
-.hero-tagline{font-weight:700;font-size:0.95rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,88,38,0.85);margin-bottom:1.5rem;}
+.hero-tagline{font-size:0.95rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,88,38,0.85);margin-bottom:1.5rem;}
 .hero p{font-size:1.1rem;color:rgba(255,255,255,0.6);max-width:560px;margin-bottom:2.5rem;line-height:1.8;}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
 .btn-primary{background:var(--orange);color:var(--white);padding:0.9rem 2rem;border:none;border-radius:4px;font-size:0.92rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:0.5rem;}
 .btn-primary:hover{background:var(--orange-dark);transform:translateY(-1px);}
 .btn-text{color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.92rem;font-weight:500;transition:color 0.2s;display:inline-flex;align-items:center;gap:0.4rem;}
 .btn-text:hover{color:var(--white);}
-.hero-creds{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;gap:1.5rem;flex-wrap:wrap;}
+.hero-creds{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;gap:2.5rem;flex-wrap:wrap;}
 .hc-val{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--orange);line-height:1;}
 .hc-lbl{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-top:0.25rem;font-weight:500;}
 .hero-cards{display:flex;flex-direction:column;gap:0;}
@@ -98,24 +134,23 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--charcoal);line-h
 .info-card:first-child{border-top:1px solid rgba(255,255,255,0.09);border-radius:6px 6px 0 0;}
 .info-card:last-child{border-radius:0 0 6px 6px;}
 .info-card:hover{background:rgba(255,255,255,0.08);}
-.ic-lbl{font-size:0.8rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(241,88,38,0.8);margin-bottom:0.3rem;}
-.ic-val{font-size:1.05rem;font-weight:600;color:rgba(255,255,255,0.9);line-height:1.3;}
-.ic-sub{font-size:0.88rem;color:rgba(255,255,255,0.4);margin-top:0.15rem;line-height:1.4;}
+.ic-lbl{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(241,88,38,0.8);margin-bottom:0.3rem;}
+.ic-val{font-size:0.9rem;font-weight:600;color:rgba(255,255,255,0.9);line-height:1.3;}
+.ic-sub{font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:0.15rem;line-height:1.4;}
 .ic-badge{display:inline-block;margin-top:0.4rem;background:var(--orange-10);border:1px solid rgba(241,88,38,0.25);color:var(--orange);font-size:0.65rem;letter-spacing:0.1em;padding:2px 8px;border-radius:3px;}
 
 /* LIFECYCLE STRIP */
 .lifecycle{background:var(--white);border-top:3px solid var(--orange);border-bottom:1px solid var(--border);padding:1.75rem 3rem;}
 .lifecycle-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
 .lc-stage{flex:1;text-align:center;position:relative;padding:0 0.5rem;}
-.lc-stage::after{content:'';position:absolute;right:-10px;top:12px;width:16px;height:16px;border-top:2.5px solid var(--orange);border-right:2.5px solid var(--orange);transform:rotate(45deg);opacity:0.5;}
+.lc-stage::after{content:'';position:absolute;right:-10px;top:26px;width:16px;height:16px;border-top:2.5px solid var(--orange);border-right:2.5px solid var(--orange);transform:rotate(45deg);opacity:0.5;}
 .lc-stage:last-child::after{display:none;}
 .lc-dot{width:40px;height:40px;border:2px solid var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--orange);background:var(--orange-10);}
 .lc-name{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);}
 
 /* SECTION COMMON */
 .section-label{font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--orange);margin-bottom:0.75rem;}
-.ai-section .section-title{color:var(--orange);}
-        .section-title{font-family:'DM Serif Display',serif;font-size:2.4rem;font-weight:400;color:var(--navy);margin-bottom:1rem;line-height:1.2;}
+.section-title{font-family:'DM Serif Display',serif;font-size:2.4rem;font-weight:400;color:var(--navy);margin-bottom:1rem;line-height:1.2;}
 .section-sub{font-size:1.05rem;color:var(--slate);max-width:620px;line-height:1.8;margin-bottom:3rem;}
 .section-inner{max-width:1280px;margin:0 auto;}
 
@@ -145,7 +180,6 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--charcoal);line-h
 /* CAPABILITIES */
 .capabilities{background:var(--light-bg);padding:5.5rem 3rem;}
 .cap-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:3rem;}
-        .cap-header h2{margin-bottom:0;}
 .cap-header-right{font-size:1rem;color:var(--slate);line-height:1.8;}
 .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
 .cap-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.75rem;transition:all 0.25s;}
@@ -168,7 +202,7 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--charcoal);line-h
 
 /* CREDENTIALS */
 .credentials{background:var(--light-bg);padding:4.5rem 3rem;}
-.cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:2.5rem;}
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem;}
 .cred-item{border-left:3px solid var(--orange);padding-left:1.5rem;}
 .cred-value{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:0.3rem;line-height:1.2;}
 .cred-desc{font-size:0.84rem;color:var(--slate);line-height:1.55;}
@@ -216,8 +250,7 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--charcoal);line-h
 footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;}
 .footer-inner{max-width:1280px;margin:0 auto;}
 .footer-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.08);gap:2rem;flex-wrap:wrap;}
-.footer-top>div:first-child{flex-shrink:0;}
-.footer-logo img,.footer-top svg{height:60px!important;width:auto;display:block;}
+.footer-logo img{height:40px;width:auto;display:block;}
 .footer-tagline{font-size:0.68rem;color:rgba(255,255,255,0.3);margin-top:6px;letter-spacing:0.08em;}
 .footer-nav{display:flex;gap:3rem;}
 .footer-col h4{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:1rem;}
@@ -225,7 +258,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
 .footer-col a:hover{color:var(--white);}
 .footer-col span{display:block;font-size:0.86rem;margin-bottom:0.55rem;}
 .footer-col a[href^="mailto"]{color:var(--orange);}
-.footer-bottom{color:rgba(255,255,255,0.7);display:flex;justify-content:space-between;align-items:center;padding-top:1.75rem;font-size:0.78rem;flex-wrap:wrap;gap:1rem;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.75rem;font-size:0.78rem;flex-wrap:wrap;gap:1rem;}
 
 /* ANIMATIONS */
 .fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease;}
@@ -245,10 +278,10 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
   .nav-inner{padding:0 1.5rem;}
   .nav-links{display:none;}
   .hero h1{font-size:2.2rem;}
-  .lifecycle{padding:1.25rem 1rem;overflow:hidden;}
-  .lifecycle-inner{min-width:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem 0.25rem;justify-items:center;}
-  .lc-stage{padding:0;}
-  .lc-stage::after{display:none;}
+  .lifecycle{padding:1.25rem 1rem;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .lifecycle-inner{min-width:640px;gap:0.25rem;}
+  .lc-stage{padding:0 0.25rem;}
+  .lc-stage::after{width:12px;height:12px;right:-4px;top:22px;border-width:2px;}
   .lc-dot{width:34px;height:34px;font-size:0.95rem;}
   .lc-name{font-size:0.6rem;letter-spacing:0.06em;}
   .hero-inner,.audiences-section,.capabilities,.why-section,.credentials,.how-section,.contact-section,.cta-section,.audiences-section{padding-left:1.5rem;padding-right:1.5rem;}
@@ -258,12 +291,6 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
   .f-row{grid-template-columns:1fr;}
   .audience-secondary{flex-direction:column;gap:1rem;}
   .footer-nav{flex-direction:column;gap:2rem;}
-  .ai-convergence{flex-direction:column;max-width:100%;align-items:stretch;}
-  .ai-conv-block{border-radius:8px!important;}
-  .ai-conv-block.right{border-radius:8px!important;}
-  .ai-conv-x{padding:0.5rem 0;}
-  .ac-list{display:flex!important;flex-direction:column!important;}
-  .audience-card{overflow:visible;}
 }
 
   /* AI SECTION */
@@ -271,7 +298,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
   .ai-section::before { content: ''; position: absolute; right: -8%; top: -20%; width: 480px; height: 480px; border: 1px solid rgba(241,88,38,0.08); border-radius: 50%; }
   .ai-section::after { content: ''; position: absolute; right: 4%; bottom: -15%; width: 300px; height: 300px; border: 1px solid rgba(241,88,38,0.05); border-radius: 50%; }
   .ai-section .section-label { color: var(--orange); }
-  .ai-section .section-title { color: var(--orange); }
+  .ai-section .section-title { color: var(--navy); }
   .ai-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-bottom: 3.5rem; }
   .ai-intro-text { font-size: 1.05rem; color: var(--slate); line-height: 1.85; }
   .ai-intro-text p + p { margin-top: 1rem; }
@@ -301,7 +328,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
     flex: 1; padding: 1.25rem 1.75rem; display: flex; align-items: center; gap: 1rem;
     border: 1px solid var(--border); border-radius: 8px 0 0 8px; background: var(--white);
   }
-  .ai-conv-block.right { border-radius: 0 8px 8px 0; background: var(--light-bg); border: 1.5px solid var(--orange); }
+  .ai-conv-block.right { border-radius: 0 8px 8px 0; border-left: none; background: var(--light-bg); border: 1px solid var(--border); border-left: none; }
   .ai-conv-icon {
     width: 42px; height: 42px; min-width: 42px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
@@ -317,9 +344,11 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
   .ai-conv-title { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: var(--navy); line-height: 1.2; }
   .ai-conv-block.right .ai-conv-title { color: var(--navy); }
   .ai-conv-x {
+    width: 40px; min-width: 40px; height: 40px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    background: transparent; z-index: 1; position: relative; margin: 0 1rem;
-    font-family: 'DM Serif Display', serif; font-size: 3rem; color: var(--orange); font-weight: 700;
+    background: transparent; z-index: 1; position: relative; margin: 0 -8px;
+    font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--orange);
+    border: 2px solid var(--border);
   }
   .ai-conv-result {
     margin-top: 1rem; padding: 1rem 1.5rem;
@@ -335,7 +364,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
 <body>
 
 <!-- NAV -->
-<nav class="nav">
+<nav class="nav" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
       <svg viewBox="0 0 375 102" style="height:90px;width:auto;display:block;">
@@ -347,12 +376,14 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
       <li><a href="#audiences">Who We Work With</a></li>
       <li><a href="#capabilities">Capabilities</a></li>
       <li><a href="#why">Why uJenga</a></li>
-      <li><a href="#ai">AI Tools</a></li><li><a href="#credentials">About</a></li>
+      <li><a href="#ai">AI Tools</a></li>
+      <li><a href="#credentials">About</a></li>
       <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
   </div>
 </nav>
 
+<main>
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
@@ -438,7 +469,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
       <div class="audience-card fade-up" style="grid-column:1/-1;">
         <div class="ac-who">Also Trusted By</div>
         <div class="ac-title">Subcontractors, Specialist Contractors &amp; Design Consultants</div>
-        <p class="ac-desc">We operate at the big table. That experience flows directly to the supply chain. Whether you are a subcontractor managing a disputed payment, a specialist contractor facing a one-sided subcontract, or a design consultant navigating scope creep, uJenga brings the same senior commercial rigour to your engagement.</p>
+        <p class="ac-desc">We operate at the big table — and that experience flows directly to the supply chain. Whether you are a subcontractor managing a disputed payment, a specialist contractor facing a one-sided subcontract, or a design consultant navigating scope creep, uJenga brings the same senior commercial rigour to your engagement.</p>
         <ul class="ac-list" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.45rem 2rem;">
           <li>Security of Payment &amp; BIF Act adjudication</li>
           <li>Contract review and risk identification</li>
@@ -499,7 +530,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
       </div>
       <div class="why-card fade-up d3">
         <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-        <div><h3>Senior-Led, Every Engagement</h3><p>You work directly with Roger Newman - 30+ years of Tier 1 experience, QBCC adjudicator and accredited mediator. Not junior staff learning on your project.</p></div>
+        <div><h3>Senior-Led, Every Engagement</h3><p>You work directly with our director - 30+ years of Tier 1 experience, QBCC adjudicator and accredited mediator. Not junior staff learning on your project.</p></div>
       </div>
     </div>
   </div>
@@ -512,7 +543,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
     <h2 class="section-title">Built on decades of infrastructure delivery.</h2>
     <div class="cred-grid">
       <div class="cred-item fade-up"><div class="cred-value">30+ Years</div><div class="cred-desc">Senior Tier 1 infrastructure experience across Queensland and national major programmes</div></div>
-      <div class="cred-item fade-up d1"><div class="cred-value">QBCC Adjudicator</div><div class="cred-desc">Registered adjudicator under the Building Industry Fairness Act 2017 - ID J1257750</div></div>
+      <div class="cred-item fade-up d1"><div class="cred-value">QBCC Adjudicator</div><div class="cred-desc">Registered adjudicator under the Building Industry Fairness Act 2017</div></div>
       <div class="cred-item fade-up d2"><div class="cred-value">Accredited Mediator</div><div class="cred-desc">Commercial dispute resolution and mediation services for infrastructure and construction</div></div>
       <div class="cred-item fade-up d2"><div class="cred-value">$1.4B+ Programmes</div><div class="cred-desc">Rail, road, marine, energy and building programmes across Queensland and nationally</div></div>
     </div>
@@ -568,7 +599,7 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
           <div class="ai-conv-title">Human Expertise</div>
         </div>
       </div>
-      <div class="ai-conv-x">+</div>
+      <div class="ai-conv-x">×</div>
       <div class="ai-conv-block right">
         <div class="ai-conv-icon machine">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -582,10 +613,10 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
 
     <div class="ai-conv-result">
       <div class="ai-conv-result-icon"></div>
-      <p><strong>The outcome:</strong> Senior specialist judgment, operating at AI scale; secured by Microsoft, built specifically for infrastructure commercial work.</p>
+      <p><strong>The outcome:</strong> Senior specialist judgment, operating at AI scale — secured by Microsoft, built specifically for infrastructure commercial work.</p>
     </div>
 
-    <h2 class="section-title" style="margin-top:2rem;"><span style="color:var(--navy);">Secured by Microsoft.</span><br><span style="color:var(--orange);">Built for Construction.</span></h2>
+    <h2 class="section-title" style="margin-top:2rem;">Secured by Microsoft.<br>Built for Construction.</h2>
 
     <!-- INTRO -->
     <div class="ai-intro">
@@ -604,7 +635,15 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
           <li>No public model training on your data, ever</li>
           <li>Outputs shared back directly to your Microsoft workspace</li>
         </ul>
-
+        <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);">
+          <div class="ai-security-title" style="margin-bottom:0.75rem;">How It Works</div>
+          <div style="display:flex;gap:0;flex-wrap:wrap;">
+            <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);padding-right:1rem;margin-right:1rem;border-right:1px solid var(--border);line-height:1.6;"><span style="color:var(--orange);font-weight:600;">Connect</span><br>Microsoft login</div>
+            <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);padding-right:1rem;margin-right:1rem;border-right:1px solid var(--border);line-height:1.6;"><span style="color:var(--orange);font-weight:600;">Prepare</span><br>AI structuring and tagging</div>
+            <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);padding-right:1rem;margin-right:1rem;border-right:1px solid var(--border);line-height:1.6;"><span style="color:var(--orange);font-weight:600;">Analyse</span><br>Specialist review</div>
+            <div style="font-size:0.78rem;color:var(--slate);line-height:1.6;"><span style="color:var(--orange);font-weight:600;">Deliver</span><br>Outputs to your workspace</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -735,10 +774,8 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
         <h2 class="section-title">Let's talk about<br>your commercial position.</h2>
         <p style="font-size:1rem;color:var(--slate);line-height:1.8;margin-bottom:2rem;">Whether you're facing a disputed payment, about to sign a subcontract, managing a deteriorating project relationship, or considering a formal claim - contact us early. The earlier we're engaged, the more we can do.</p>
         <ul class="contact-details">
-          <li><div class="cd-row"><span class="cd-lbl">Director</span><span class="cd-val">Roger Newman</span></div></li>
           <li><div class="cd-row"><span class="cd-lbl">Email</span><span class="cd-val"><a href="mailto:connect@ujenga.com.au">connect@ujenga.com.au</a></span></div></li>
           <li><div class="cd-row"><span class="cd-lbl">Address</span><span class="cd-val">Level 19, 10 Eagle Street<br>Brisbane QLD 4000</span></div></li>
-          <li><div class="cd-row"><span class="cd-lbl">QBCC</span><span class="cd-val">Adjudicator ID J1257750</span></div></li>
         </ul>
       </div>
       <form class="c-form" onsubmit="handleSubmit(event)">
@@ -766,12 +803,15 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div>
         <svg viewBox="0 0 210 58" style="height:42px;width:auto;display:block;"><text x="2" y="36" font-family="Michroma, sans-serif" font-size="36" fill="#FFFFFF" font-weight="400">uJenga</text><text x="3" y="52" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" letter-spacing="0.15em">CERTAINTY YOU CAN BUILD ON</text></svg>
+        <div class="footer-tagline">certainty you can build on</div>
       </div>
       <div class="footer-nav">
         <div class="footer-col">
@@ -779,7 +819,8 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
           <a href="#audiences">Who We Work With</a>
           <a href="#capabilities">Capabilities</a>
           <a href="#why">Why uJenga</a>
-          <a href="#ai">AI Tools</a></li><li><a href="#credentials">About</a>
+          <a href="#ai">AI Tools</a>
+          <a href="#credentials">About</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="footer-col">
@@ -795,7 +836,6 @@ footer{background:#0A1628;color:rgba(255,255,255,0.45);padding:4rem 3rem 2.5rem;
           <a href="mailto:connect@ujenga.com.au">connect@ujenga.com.au</a>
           <span>Level 19, 10 Eagle Street</span>
           <span>Brisbane QLD 4000</span>
-          <span>QBCC ID J1257750</span>
         </div>
       </div>
     </div>
